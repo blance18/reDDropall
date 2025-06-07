@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>reDDrop by Alliance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Unbounded', sans-serif;
+    }
+    header {
+      background: radial-gradient(circle at top left, #3a0000, #000);
+      padding: 20px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+    .logo {
+      width: 160px;
+      margin: 0 auto 10px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #111;
+    }
+    .top-bar button, .top-bar select {
+      background: #c00000;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .top-bar button:hover {
+      background: #ff0000;
+    }
+    .tgk-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #000;
+      padding: 6px 14px;
+      border-radius: 14px;
+      font-size: 0.9em;
+      font-weight: bold;
+      color: #fff;
+      border: 2px solid;
+      border-image: linear-gradient(to right, red, #ff7777) 1;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 12px rgba(255,0,0,0.3);
+    }
+    .grid-3 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+    .mini-panel {
+      flex: 1 1 calc(25% - 20px);
+      background: linear-gradient(145deg, #1a1a1a, #000);
+      border: 1px solid #ff3c3c;
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(255,0,0,0.2);
+    }
+    .panel {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #333;
+      position: relative;
+      overflow: hidden;
+    
+  line-height: 1.6;
+}
+    .panel h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #ff4d4d;
+    }
+    .form-section {
+      background: linear-gradient(to bottom right, #220000, #000);
+      padding: 40px;
+      margin: 50px auto;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,0,0,0.3);
+    }
+    .form-section label {
+      display: block;
+      margin-bottom: 8px;
+      margin-top: 18px;
+      font-size: 1em;
+      color: #ddd;
+    }
+    .form-section input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .form-section button {
+      margin-top: 20px;
+      padding: 15px 25px;
+      border: none;
+      background: #c00000;
+      color: #fff;
+      font-size: 1.1em;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .form-section button:hover {
+      background: #ff0000;
+    }
+    .faq {
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    .faq-item {
+      background: #111;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-question {
+      background: #222;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .faq-answer {
+      padding: 15px;
+      display: none;
+      background: #1a1a1a;
+      color: #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 0.9em;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 60px auto;
+      width: 80%;
+    }
+    @media (max-width: 768px) {
+      .grid-3 {
+        flex-direction: column;
+        align-items: center;
+      }
+      .mini-panel {
+        flex: 1 1 100%;
+        max-width: 90%;
+      }
+      .top-bar {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <button onclick="window.location.href='https://t.me/reDDropx'">Subscribe</button>
+    <select>
+      <option>English</option>
+      <option>Русский</option>
+    </select>
+  </div>
+
+  <header>
+    <h1>reDDrop by Alliance</h1>
+    <p>Prize giveaway for our subscribers</p>
+    <div class="tgk-badge">TGK: reDDropx</div>
+  </header>
+
+  <div class="panel">
+    <h2>🔥 Bonus at the bottom of the page for all participants</h2>
+    <p>It’s easy to join — and anyone can win. Don’t miss out!</p>
+  </div>
+
+  <div class="grid-3">
+    <div class="mini-panel">💳 Gift certificate for 1,000 ₽</div>
+    <div class="mini-panel">🧃 RED BOX: 3 random flavors</div>
+    <div class="mini-panel">🎫 Promo code for 50% discount</div>
+  </div>
+
+  <div class="grid-3">
+    <div class="mini-panel">🎁 10 promo codes of 100₽ — for 10 random participants</div>
+  </div>
+
+  <div class="panel">
+    <h2 id="rules-title">📜 Participation Rules:</h2>
+    <ul>
+      <li>🛒 Purchase from 390 ₽</li>
+      <li>👥 Subscribe to Telegram channel <strong>@reDDropx</strong></li>
+      <li>📱 Enter your <u>Telegram username (lowercase)</u></li>
+      <li>📧 Add a working email — it increases your chances!</li>
+      <li>🎯 Each order = +1 point. 3 orders = 3 chances!</li>
+    </ul>
+  </div>
+
+  <div class="form-section">
+    <h2 id="form-title">📨 Participate</h2>
+    <form>
+      <label for="username" id="label-username">Telegram username (must include @):</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="email" id="label-email">Email (optional):</label>
+      <input type="email" id="email" name="email">
+
+      <p style="margin-top: 18px; color: #ccc; font-size: 0.95em;" id="order-note">🛒 Order details will be clarified via private message.</p>
+
+      <button type="submit" id="submit-button">Participate</button>
+    </form>
+  </div>
+
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-question">When is the giveaway?</div>
+      <div class="faq-answer">The giveaway will be held on June 15 live on the @reDDropx Telegram channel and on etoalliance.ru</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How to increase chances?</div>
+      <div class="faq-answer">Each purchase gives you 1 point. You also get a bonus chance for entering your email.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Who will contact me if I win?</div>
+      <div class="faq-answer">Anya — manager @reddropall will reach out to you.</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="panel">
+    <h2>🎯 Why should you join?</h2>
+    <p>Prices are rising, exciting things are becoming inaccessible, and discounts are getting rarer.</p>
+    <p>You spend money and get only your purchase — nothing more.</p>
+    <p>But what if every order from 390 ₽ gave you a chance to win?</p>
+    <p>Join reDDrop — each order is a chance for prizes, promo codes, and access to a private bonus chat.</p>
+    <p style="background: linear-gradient(to right, red, #ff6666); padding: 10px; border-radius: 10px; font-weight: bold;">Each participant gets access to a closed Telegram chat with weekly promo codes!</p>
+  </div>
+
+  <footer>
+    <p>Giveaway channel: <strong><a href="<a href="https://t.me/reDDropx"" style="color: #ff6666;">https://t.me/reDDropx"</a> style="color: #ff6666;"><a href="<a href="https://t.me/reDDropx"" style="color: #ff6666;">https://t.me/reDDropx"</a> style="color: #ff6666;">@reDDropx</a></a></strong></p>
+    <p>Drop manager: <strong><a href="<a href="https://t.me/reddropall"" style="color: #ff6666;">https://t.me/reddropall"</a> style="color: #ff6666;"><a href="<a href="https://t.me/reddropall"" style="color: #ff6666;">https://t.me/reddropall"</a> style="color: #ff6666;">@reddropall</a></a></strong></p>
+    <p>Buy products from 390 ₽: <a href="<a href="https://etoalliance.ru"" style="color: #ff6666;">https://etoalliance.ru"</a> style="color: #ff6666;">etoalliance.ru</a></p>
+    <p>Main Alliance channel: <a href="<a href="https://t.me/+70uAmJOfmblkNzgy"" style="color: #ff6666;">https://t.me/+70uAmJOfmblkNzgy"</a> style="color: #ff6666;"><a href="https://t.me/+70uAmJOfmblkNzgy" style="color: #ff6666;">https://t.me/+70uAmJOfmblkNzgy</a></a></p>
+    <br>© 2025 Alliance. All rights reserved.
+  </footer>
+
+  
+<script>
+  
+    // Telegram
+    document.querySelector("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const token = "7392448145:AAFjHa_vVlDNz2xSirzSUsqTxYIa6vVxJwI";
+      const chat_id = "6258371389";
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = `
+📩 New submission from reDDrop:
+
+👤 Username: ${username}
+📧 Email: ${email || "not provided"}
+      `;
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: chat_id,
+          text: message,
+          parse_mode: "Markdown"
+        })
+      })
+      .then(res => {
+        if (res.ok) {
+          alert("✅ Submitted successfully!");
+          e.target.reset();
+        } else {
+          alert("❌ Failed to send to Telegram.");
+        }
+      })
+      .catch(err => {
+        console.error("Telegram Error:", err);
+        alert("❌ Connection error.");
+      });
+    });
+
+const translations = {
+    en: {
+      subscribe: "Subscribe",
+      usernameLabel: "Telegram username (must include @):",
+      emailLabel: "Email (optional):",
+      orderNote: "🛒 Order details will be clarified via private message.",
+      submit: "Participate",
+      headerTitle: "reDDrop by Alliance",
+      headerSubtitle: "Prize giveaway for our subscribers",
+      bonusTitle: "🔥 Bonus at the bottom of the page for all participants",
+      bonusText: "It’s easy to join — and anyone can win. Don’t miss out!",
+      prize1: "💳 Gift certificate for 1,000 ₽",
+      prize2: "🧃 RED BOX: 3 random flavors",
+      prize3: "🎫 Promo code for 50% discount",
+      prize4: "🎁 10 promo codes of 100₽ — for 10 random participants",
+      rulesTitle: "📜 Participation Rules:",
+      rulesList: [
+        "🛒 Purchase from 390 ₽",
+        "👥 Subscribe to Telegram channel @reDDropx",
+        "📱 Enter your Telegram username (lowercase)",
+        "📧 Add a working email — it increases your chances!",
+        "🎯 Each order = +1 point. 3 orders = 3 chances!"
+      ],
+      formTitle: "📨 Participate",
+      faqQuestions: [
+        "When is the giveaway?",
+        "How to increase chances?",
+        "Who will contact me if I win?"
+      ],
+      faqAnswers: [
+        "The giveaway will be held on June 15 live on the @reDDropx Telegram channel and on etoalliance.ru",
+        "Each purchase gives you 1 point. You also get a bonus chance for entering your email.",
+        "Anya — manager @reddropall will reach out to you."
+      ],
+      whyTitle: "🎯 Why should you join?",
+      whyPoints: [
+        "Prices are rising, exciting things are becoming inaccessible, and discounts are getting rarer.",
+        "You spend money and get only your purchase — nothing more.",
+        "But what if every order from 390 ₽ gave you a chance to win?",
+        "Join reDDrop — each order is a chance for prizes, promo codes, and access to a private bonus chat.",
+        "Each participant gets access to a closed Telegram chat with weekly promo codes!"
+      ],
+      footer: [
+        "Giveaway channel: @reDDropx",
+        "Drop manager: @reddropall",
+        "Buy products from 390 ₽: etoalliance.ru",
+        "Main Alliance channel: https://t.me/+70uAmJOfmblkNzgy",
+        "© 2025 Alliance. All rights reserved."
+      ]
+    },
+    ru: {
+      subscribe: "Подписаться",
+      usernameLabel: "Telegram username (обязательно с @):",
+      emailLabel: "Почта (необязательно):",
+      orderNote: "🛒 По заказу уточним в ЛС.",
+      submit: "Участвовать",
+      headerTitle: "reDDrop от Alliance",
+      headerSubtitle: "Розыгрыш призов для подписчиков",
+      bonusTitle: "🔥 Бонус внизу страницы для всех участников",
+      bonusText: "Присоединиться просто — и победить может каждый. Не упусти шанс!",
+      prize1: "💳 Сертификат на 1000 ₽",
+      prize2: "🧃 RED BOX: 3 случайных вкуса",
+      prize3: "🎫 Промокод на скидку 50%",
+      prize4: "🎁 10 промокодов по 100₽ — для 10 случайных участников",
+      rulesTitle: "📜 Условия участия:",
+      rulesList: [
+        "🛒 Покупка от 390 ₽",
+        "👥 Подписка на Telegram-канал @reDDropx",
+        "📱 Введите свой Telegram (@в формате)",
+        "📧 Добавьте почту — это увеличит шансы!",
+        "🎯 Каждый заказ = 1 шанс. 3 заказа = 3 шанса!"
+      ],
+      formTitle: "📨 Участвуй",
+      faqQuestions: [
+        "Когда будет розыгрыш?",
+        "Как увеличить шансы?",
+        "Кто со мной свяжется, если я выиграю?"
+      ],
+      faqAnswers: [
+        "Розыгрыш 15 июня в прямом эфире в Telegram-канале @reDDropx и на сайте etoalliance.ru",
+        "Каждая покупка даёт 1 балл. Доп. шанс — за введённую почту.",
+        "С вами свяжется Аня — менеджер @reddropall"
+      ],
+      whyTitle: "🎯 Почему стоит участвовать?",
+      whyPoints: [
+        "Цены растут, интересное становится недоступным, а скидки — редкими.",
+        "Ты тратишь деньги и получаешь только покупку — и всё.",
+        "А что, если каждый заказ от 390 ₽ — это шанс выиграть?",
+        "Присоединяйся к reDDrop — каждый заказ даёт шанс на призы, промокоды и доступ в приватный бонус-чат.",
+        "Каждый участник получает доступ к закрытому Telegram-чату с еженедельными промокодами!"
+      ],
+      footer: [
+        "Канал розыгрыша: @reDDropx",
+        "Менеджер дропа: @reddropall",
+        "Покупки от 390 ₽: etoalliance.ru",
+        "Главный канал Alliance: https://t.me/+70uAmJOfmblkNzgy",
+        "© 2025 Alliance. Все права защищены."
+      ]
+    }
+  };
+
+  document.querySelector('.top-bar select').addEventListener('change', (e) => {
+    const lang = e.target.value === 'Русский' ? 'ru' : 'en';
+    const t = translations[lang];
+
+    document.querySelector('.top-bar button').innerText = t.subscribe;
+    document.getElementById('label-username').innerText = t.usernameLabel;
+    document.getElementById('label-email').innerText = t.emailLabel;
+    document.getElementById('order-note').innerText = t.orderNote;
+    document.getElementById('submit-button').innerText = t.submit;
+
+    document.querySelector('header h1').innerText = t.headerTitle;
+    document.querySelector('header p').innerText = t.headerSubtitle;
+    document.querySelectorAll('.panel')[0].querySelector('h2').innerText = t.bonusTitle;
+    document.querySelectorAll('.panel')[0].querySelector('p').innerText = t.bonusText;
+
+    const prizes = [t.prize1, t.prize2, t.prize3, t.prize4];
+    document.querySelectorAll('.mini-panel').forEach((el, i) => el.innerText = prizes[i]);
+
+    document.getElementById('rules-title').innerText = t.rulesTitle;
+    const rules = document.querySelectorAll('.panel ul li');
+    t.rulesList.forEach((txt, i) => {
+      if (rules[i]) rules[i].innerText = txt;
+    });
+
+    document.getElementById('form-title').innerText = t.formTitle;
+
+    document.querySelectorAll('.faq-question').forEach((q, i) => {
+      q.innerText = t.faqQuestions[i];
+    });
+    document.querySelectorAll('.faq-answer').forEach((a, i) => {
+      a.innerText = t.faqAnswers[i];
+    });
+
+    const whyPanel = document.querySelectorAll('.panel')[2];
+    whyPanel.querySelector('h2').innerText = t.whyTitle;
+    const whyParas = whyPanel.querySelectorAll('p');
+    t.whyPoints.forEach((txt, i) => {
+      if (whyParas[i]) whyParas[i].innerText = txt;
+    });
+
+    const footer = document.querySelector('footer');
+    footer.querySelectorAll('p').forEach((el, i) => {
+      if (t.footer[i]) el.innerHTML = t.footer[i];
+    });
+  });
+
+  // FAQ collapse
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('.faq-question').forEach(el => {
+      el.addEventListener('click', () => {
+        const next = el.nextElementSibling;
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+        next.style.display = next.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
