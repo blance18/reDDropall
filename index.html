@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>reDDrop | Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      background: #000;
+      color: #fff;
+      font-family: 'Unbounded', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .subtitle {
+      font-size: 1.6em;
+      color: #ff3c3c;
+      margin-bottom: 10px;
+    }
+    .countdown {
+      font-size: 2em;
+      color: #aaa;
+      margin-top: 10px;
+      animation: blink 1.5s infinite;
+    }
+    .message {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-top: 30px;
+    }
+    a {
+      color: #ff6666;
+      text-decoration: none;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .subtitle {
+        font-size: 1.2em;
+      }
+      .countdown {
+        font-size: 1.5em;
+      }
+      .message {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color: #ff3c3c;">reDDrop</h1>
+<div style="background: #1a1a1a; padding: 15px 20px; border: 2px solid #ff3c3c; margin-bottom: 20px; border-radius: 10px;">
+  <strong style="color: #ff3c3c; font-size: 1.4em;">
+    ⚠️ Из-за технических неполадок розыгрыш перенесён на 1 июля!
+  </strong>
+</div>
+  <div class="subtitle">Что-то грандиозное грядет...</div>
+  <div class="countdown" id="countdown">Осталось: — : — : — : —</div>
+  <div class="message">
+    Подключайся к
+    <a href="https://t.me/+UhpI40ST9rxhY2Yy" onclick="event.stopPropagation();" title="@reDDropx">@reDDropx</a>
+    — не пропусти!
+  </div>
+
+  <script>
+    const launchDate = new Date("2025-07-01T00:00:00").getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+
+      if (diff <= 0) {
+        clearInterval(timer);
+        window.location.href = "landing.html"; // запуск лендинга
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerText =
+        `Осталось: ${days}д ${hours}ч ${minutes}м ${seconds}с`;
+    }, 1000);
+  </script>
+
+  <footer style="margin-top: 40px; font-size: 0.9em; color: #666;">
+    © 2025 <strong>Alliance</strong> и <strong>reDDrop</strong>. Все права защищены.
+  </footer>
+</body>
+</html>
